@@ -11,12 +11,8 @@ import {
 } from "./styles";
 import { InputsInterface } from "./types";
 
-export function LoginPage() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<InputsInterface>();
+export default function LoginPage() {
+  const { register, handleSubmit } = useForm<InputsInterface>();
 
   function handleFormSubmit(data: InputsInterface) {
     //@TODO: call authencicate usecase
@@ -31,7 +27,7 @@ export function LoginPage() {
         </TextInputGroup>
         <LoginButton>Login</LoginButton>
         <RegisterText>
-          Não tem conta? <RegisterLink>Crie uma!</RegisterLink>
+          Não tem conta? <RegisterLink>Crie uma aqui!</RegisterLink>
         </RegisterText>
       </LoginForm>
     </Container>
